@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sibling selector | Attribute selector</title>
+    <style>
+        h2+p{
+            color: blue;
+        }
+        input[type="text"]{
+            border: 2px solid pink;
+        }
+        input:focus{
+            outline: 2px solid violet;
+        }
+        a:hover{
+            background-color: greenyellow;
+        }
+        p::first-letter{
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS selectors</h2>
+    <p>sibling selectors: selects the elements next to each other.</p>
+    <p>One more paragraph</p>
+    <h2>Heading tag</h2>
+    <input type="text" name="" id="" placeholder="enter user name">
+    <a href="#">Click here</a>
+
+</body>
+</html>
