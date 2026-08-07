@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Flexbox</title>
+    <title>CSS Flexbox | dispaly | flex-direction </title>
     <style>
         .container{
             display: flex;
@@ -16,6 +16,15 @@
             color:darkred;
             padding: 15px;
         }
+         .container2{
+            display: flex;
+            border: 2px solid brown;
+            gap: 10px;
+            padding: 10px;
+            /* column | row | row-reverse | column-reverse*/
+            flex-direction: column-reverse; 
+            margin-top: 20px;
+         }
     </style>
 </head>
 <body>
@@ -28,5 +37,11 @@
         <div class="item">Item 2</div>
         <div class="item">Item 3</div>
     </div>
+    <div class="container2">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
 </body>
 </html>
