@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Flexbox | dispaly | flex-direction </title>
+    <title>CSS Flexbox | dispaly | flex-direction | justify-content</title>
     <style>
         .container{
             display: flex;
@@ -25,6 +25,22 @@
             flex-direction: column-reverse; 
             margin-top: 20px;
          }
+
+            .container3{
+            display: flex;
+            border: 2px solid orange;
+            gap: 10px;
+            padding: 10px;
+            /* center | space-around | space-between | space-evenly | flex-start | flex-end*/
+            justify-content: space-around; 
+            margin-top: 20px;
+        }
+        .item3{
+            background-color:rgb(87, 156, 18);
+            color:cornsilk;
+            padding: 15px;
+        }
+
     </style>
 </head>
 <body>
@@ -37,11 +53,21 @@
         <div class="item">Item 2</div>
         <div class="item">Item 3</div>
     </div>
+
     <div class="container2">
         <div class="item">Item 1</div>
         <div class="item">Item 2</div>
         <div class="item">Item 3</div>
     </div>
+
+    <div class="container3">
+        <div class="item3">Item 1</div>
+        <div class="item3">Item 2</div>
+        <div class="item3">Item 3</div>
+    </div>
+
+
+
 
 </body>
 </html>
