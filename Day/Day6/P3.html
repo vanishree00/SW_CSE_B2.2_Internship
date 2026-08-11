@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(230, 225, 202);
+            color: crimson;
+        }
+        section{
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        .box{
+            background-color: cadetblue ;
+            color: aliceblue;
+            padding: 15px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .basic-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2,120px);
+            gap:12px;
+            border: 1px solid #875050;
+            background: #867292;
+        }
+        .gap-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2,120px);
+            gap:12px;
+            /* column-gap: 25px; */
+            border: 1px solid #875050;
+            background: #867292;
+            /* horizontal alignment in container */
+            justify-content: center; 
+            /* verical alignment */
+            align-content: center;
+            justify-items: center;
+            align-items: center;
+            width: 400px;
+            height: 250px;
+        }
+        .page{
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: "header header" "sidebar main" "footer footer";
+            gap:10px;
+            background-color: burlywood;
+            min-height: 400px;
+        }
+        .header{
+            grid-area: header;
+            background-color: #867292;
+            color: aliceblue;
+            padding: 15px;
+            text-align: center;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: #d04678;
+            color: aliceblue;
+            padding: 15px;
+            text-align: center;
+        }
+        .main{
+            grid-area: main;
+            background-color: #f1df40;
+            color: rgb(0, 0, 0);
+            padding: 15px;
+            text-align: center;
+        }
+        .footer{
+            grid-area: footer;
+            background-color: maroon;
+            color: azure;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* 4. Grid Item placement (grid-column, grid-row, span) */
+        .placement-grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,80px);
+            gap: 10px;
+            background-color: #f1df40;
+        }
+        .placement-grid .item1{
+            grid-column: 1/4;
+        }
+        .placement-grid .item2{
+            grid-row: 2/4;
+        }
+        .placement-grid .item3{
+            grid-column: 3 / span 2;
+        }
+
+        /* 5. Align-self & justify-self */
+        .self-grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 120px);
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            background-color: darkcyan;
+        }
+        .self-grid .special{
+            align-self: start;
+            justify-self: end;
+            background-color: chartreuse;
+        }
+
+        .card-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(180px, 1fr));
+            gap:15px;
+            background-color: #867292;
+        }
+        .card{
+            background-color: aliceblue;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>CSS Grid: two-dimensional layout system. We can design layouts using rows and columns together.</p>
+    <section>
+        <h2>1. Basic Grid (columns, rows, repeat, fr)</h2>
+        <div class="basic-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </section>
+    <section>
+        <h2>2. Gap, row-gap, column-gap </h2>
+        <div class="gap-grid">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
+    </section>
+
+     <section>
+        <h2>3. Grid Template Areas (Header, sidebar, Main, Footer) </h2>
+        <div class="page">
+            <header class="header">
+                <div class="">Link1</div>
+                <div class="">Link2</div>
+            </header>
+            <aside class="sidebar">Sidebar</aside>
+            <main class="main">Main Content</main>
+            <footer class="footer">Footer</footer>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Grid Item placement (grid-column, grid-row, span) </h2>
+        <div class="placement-grid">
+            <div class="box item1">Item1</div>
+            <div class="box">Item 2</div>
+            <div class="box item2">Item3</div>
+            <div class="box">Item 4</div>
+            <div class="box item3">Item5</div>
+            <div class="box">Item 6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>5. Align-self & justify-self </h2>
+        <div class="self-grid">
+            <div class="box">Normal</div>
+            <div class="box special">Item 2</div>
+            <div class="box">Normal3</div>
+            <div class="box">Normal4</div>
+            <div class="box">Normal5</div>
+            <div class="box">Normal6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Responsive grid</h2>
+        <div class="card-grid">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+        </div>
+    </section>
+</body>
+</html
