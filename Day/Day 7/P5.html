@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Card - Variables, Transform, Transition</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text: #e2e8f0;
+    --accent: #38bdf8;
+    --radius: 12px;
+    --space: 16px;
+    --dur: 0.3s;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
+  }
+
+  .card {
+    width: 220px;
+    padding: var(--space);
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    text-align: center;
+    cursor: pointer;
+    transition:
+      transform var(--dur) ease,
+      background-color var(--dur) ease;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    transform: translatey(-8px) scale(1.05) rotate(-2deg);
+    background-color: #263344;
+    outline: none;
+  }
+
+  .card h2 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--accent);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h2>Hover / Focus Me</h2>
+    <p>Variables + Transform + Transition</p>
+  </div>
+</body>
+</html>
