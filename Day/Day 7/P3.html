@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        .box{
+            background-color: chocolate;
+            width: 100px;
+            height: 100px;
+            animation-name: slide;
+            animation-duration: 3s;
+            animation-timing-function: ease-in-out;
+            animation-play-state: paused;
+        }
+        @keyframes slide{
+            from {
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(200px);
+            }
+        }
+        .bouncing-box{
+            background-color: rgb(90, 21, 105);
+            width: 100px;
+            height: 100px;
+            animation: bounce 1s ease-in-out;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes bounce{
+            0% {
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-60px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Animation -->
+     CSS Animation: allow an element to gradually change between different styles
+     without JavaScript. @keyframes: define the animation stages and animation properties
+     to control timing, repetition, direction & plaback.
+
+     <!-- <div class="box"></div> -->
+
+     <div class="bouncing-box"></div>
+</body>
+</html>
