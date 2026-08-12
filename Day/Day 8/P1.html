@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript(JS) usage</title>
+    <script src="P1.js"></script>
+</head>
+<body>
+    <!-- Inline JS -->
+    <button onclick="alert('Hello Learners, good morning. This is Inline JS')">Click me</button>
+
+    <!-- Internal JS -->
+    <button id="internal-js">Click me 2</button>
+
+    <!-- External JS -->
+     <button id="external-js">Click me 3</button>
+
+     <script>
+        const myButton = document.getElementById('internal-js');
+
+        myButton.addEventListener('click',function(){
+            alert('Hello Learners, Good morning. This is Internal JS')
+        });
+    </script>
+</body>
+</html>
