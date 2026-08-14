@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS modification via JS</title>
+</head>
+<body>
+    <p id="txt">Hello Namaste</p>
+    <button id="changeTCBtn">Change Text color</button>
+    <button id="changeBgBtn">Change Bg color</button>
+
+    <script>
+        const txt = document.getElementById("txt");
+        const changeTCBtn = document.getElementById("changeTCBtn");
+        const changeBgBtn = document.getElementById("changeBgBtn");
+
+        changeTCBtn.addEventListener("click",function(){
+           txt.style.color = "red";
+        });
+        
+        changeBgBtn.addEventListener("click",function(){
+           document.body.style.backgroundColor = "lightblue";
+        });
+    </script>
+</body>
+</html>
