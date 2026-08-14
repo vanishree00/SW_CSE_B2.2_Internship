@@ -12,6 +12,8 @@
     <p id ="it">innerText</p>
     <!-- innerHTML -->
     <p id ="ih">innerHTML</p>
+    <button id="changeBtn">Click for change</button>
+
 
     <script>
         // textContent: used when working with the plain text; does not 
@@ -29,6 +31,12 @@
         const ihe = document.getElementById("ih");
         console.log(ihe.innerHTML); //innerHTML
         ihe.innerHTML = "<strong><i>innerHTML</i> changed via JS; example</strong>";
+        const changeBtn = document.getElementById("changeBtn");
+        changeBtn.addEventListener("click",function(){
+            tce.textContent = "textContent changed via JS; example. After the button is clicked.";
+            ite.innerText = "innerText changed via JS; example. After the button is clicked.";
+            ihe.innerHTML = "<strong><i>innerHTML</i> changed via JS; example</strong>. After the button is clicked."
+        });
     </script>
 </body>
 </html>
