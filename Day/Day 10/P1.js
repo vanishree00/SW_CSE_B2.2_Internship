@@ -66,3 +66,8 @@ return x + y + z;
 }
 const nums3 = [1, 2, 3];
 console.log(sum(...nums3)); // 6
+
+// Unique values:
+const arr2 = [1,8,2,3,3,4,5,4,6,4,7,8];
+const unique = [...new Set(arr2)];
+console.log(unique);
