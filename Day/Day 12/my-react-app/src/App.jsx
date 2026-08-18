@@ -1,8 +1,15 @@
+import { Welcome } from "./components/P1.jsx";
+import Greet from "./components/P2.jsx";
+import { Movies_list} from "./components/P3.jsx";
+
 function App() {
-  
   return (
-    <h1>Hello My first react App</h1>
-  )
+    <div>
+        <Welcome />
+        <Greet />
+        <Movies_list/>
+    </div>
+  );
 }
 
-export default App
+export default App;
