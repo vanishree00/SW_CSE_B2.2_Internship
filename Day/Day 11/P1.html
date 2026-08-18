@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working with Attributes: JS</title>
+</head>
+<body>
+    <img src="../Images/dog.jpg" alt="">
+
+    <input type="text" disabled>
+    <!-- getAttributes & setAttributes -->
+     <script>
+        const img = document.querySelector("img");
+        // Read attribute
+        const src = img.getAttribute("src");
+
+        // setAttribute
+        img.setAttribute("alt","Image of an animal");
+        img.setAttribute("src","../Images/tiger.jpg");
+
+        // removeAttribute and hasAttribute
+        const input = document.querySelector("input");
+        console.log(input.hasAttribute("disabled"));
+        input.removeAttribute("disabled");
+
+     </script>
+</body>
+</html>
