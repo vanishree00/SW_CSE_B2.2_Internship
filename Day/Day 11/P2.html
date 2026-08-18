@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating and adding elements</title>
+</head>
+<body>
+    <div id="container">
+        <div class="box">Existing element 1</div>
+        <div class="box">Existing element 2</div>
+    </div>
+    <script>
+        const newDiv = document.createElement("div");
+        newDiv.textContent = "I am a new div";
+        newDiv.classList.add("box");
+        const container = document.querySelector("#container");
+        // appendChild: adds the element at the last child
+        container.appendChild(newDiv);
+
+        // Prepend(): adds the element as the first child
+        const anotherDiv = document.createElement("div");
+        anotherDiv.textContent = "I'm added as prepend()";
+        anotherDiv.classList.add("box");
+        container.prepend(anotherDiv);
+        
+        </script>
+</body>
+</html>
