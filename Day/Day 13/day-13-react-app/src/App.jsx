@@ -1,7 +1,7 @@
 import { Welcome } from "./components/P1";
 import { ProductCard} from "./components/P2";
 import  SonyImg  from "./assets/sony.jpg";
-
+import ButtonDemo from "./components/P3";
 import './App.css'
 
 function App() {
