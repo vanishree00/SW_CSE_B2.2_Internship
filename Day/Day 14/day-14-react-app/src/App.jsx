@@ -4,6 +4,12 @@ import ActionButtons from "./components/EventHandlerThree";
 import SimpleList from "./components/ListAndKeysOne"
 import  UserListHook from "./components/HooksOne"
 import ThemeProviderDemo from "./components/HooksTwo";
+import SimpleNameForm from "./components/FormOne";
+import SignupForm from "./components/FormTwo";
+import ValidatedForm from "./components/FormThree";
+
+import GitHubProfile from "./components/GitHubApi";
+
 
 function App() {
   return (
@@ -13,7 +19,14 @@ function App() {
       <ActionButtons/>
       <SimpleList />
       <UserListHook /> */}
-      <ThemeProviderDemo/>
+      {/* <ThemeProviderDemo/> */}
+      
+      {/* <SimpleNameForm/> */}
+      {/* <SignupForm/> */}
+      {/* <ValidatedForm/> */}
+
+      <GitHubProfile username="vanishree00"/>
+
     </>
   )
 }

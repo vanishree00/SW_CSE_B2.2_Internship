@@ -39,3 +39,4 @@ function SimpleNameForm() {
     </form>
   );
 }
+export default  SimpleNameForm;
