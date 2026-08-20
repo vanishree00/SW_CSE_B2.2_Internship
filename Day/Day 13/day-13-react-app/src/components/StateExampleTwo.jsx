@@ -12,3 +12,4 @@ function ToggleText() {
         </div>
     );
 }
+export default ToggleText;
