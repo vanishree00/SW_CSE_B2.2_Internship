@@ -1,21 +1,8 @@
 function SimpleList() {
   const fruits = [
     // Only unique values
-    "apple",
-    "banana",
-    "mango",
-    "orange",
-    "grape",
-    "strawberry",
-    "blueberry",
-    "pineapple",
-    "watermelon",
-    "kiwi",
-    "peach",
-    "cherry",
-    "avocado",
-    "pomegranate",
-    "lemon",
+   // Un-comment following line to render the list
+    //"apple", "banana", "mango", "orange", "grape", "strawberry", "blueberry", "pineapple", "watermelon", "kiwi", "peach", "cherry", "avocado", "pomegranate", "lemon"
   ];
  const vegetablesWithId = [
     // Repeated/ duplicate names but with unique id
@@ -37,6 +24,8 @@ function SimpleList() {
   { "id": 16, "name": "zucchini" },
   { "id": 17, "name": "zucchini" }, //duplicate
 ];
+
+
 
 
   return (
